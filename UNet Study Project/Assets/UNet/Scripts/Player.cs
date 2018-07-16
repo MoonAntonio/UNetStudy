@@ -40,7 +40,23 @@ namespace MoonAntonio
 			}
 
 			// Solo instanciara el cubo si es Local. Es decir, si soy el cliente.
-			Instantiate(prefabCubo);
+			// Decir al servidor que instancie nuestra unidad
+			CmdSpawnUnidad();
+		}
+		#endregion
+
+		#region Servidor
+		/// <summary>
+		/// <para>Le dice al servidor que instancie la unidad.</para>
+		/// </summary>
+		[Command]
+		private void CmdSpawnUnidad()
+		{
+			// Instanciamos localmente el objeto
+			GameObject go = Instantiate(prefabCubo);
+
+			// Propagamos el objeto creado a los demas clientes.
+			NetworkServer.Spawn(go);
 		}
 		#endregion
 	}

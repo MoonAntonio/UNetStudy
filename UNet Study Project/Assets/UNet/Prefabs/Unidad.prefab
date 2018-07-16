@@ -19,6 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4551123357395878}
+  - component: {fileID: 114427554498502676}
   m_Layer: 0
   m_Name: Unidad
   m_TagString: Untagged
@@ -124,3 +125,35 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114427554498502676
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1254898430932890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: 870353891bb340e2b2a9c8707e7419ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 2
+    i1: 23
+    i2: 182
+    i3: 167
+    i4: 184
+    i5: 138
+    i6: 182
+    i7: 68
+    i8: 27
+    i9: 202
+    i10: 204
+    i11: 11
+    i12: 121
+    i13: 138
+    i14: 6
+    i15: 173
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0
