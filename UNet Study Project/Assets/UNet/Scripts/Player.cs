@@ -9,6 +9,7 @@
 
 #region Librerias
 using UnityEngine;
+using UnityEngine.Networking;
 #endregion
 
 namespace MoonAntonio
@@ -16,7 +17,7 @@ namespace MoonAntonio
 	/// <summary>
 	/// <para>Controller del jugador/Cliente.</para>
 	/// </summary>
-	public class Player : MonoBehaviour 
+	public class Player : NetworkBehaviour 
 	{
 		#region Variables Publicas
 		/// <summary>
@@ -31,6 +32,14 @@ namespace MoonAntonio
 		/// </summary>
 		private void Start()// Inicializador de Player
 		{
+			// Comprobamos si es el objeto local
+			if (!isLocalPlayer)
+			{
+				// Este objeto es de otro jugador
+				return;
+			}
+
+			// Solo instanciara el cubo si es Local. Es decir, si soy el cliente.
 			Instantiate(prefabCubo);
 		}
 		#endregion
