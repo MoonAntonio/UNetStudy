@@ -18,6 +18,21 @@ namespace MoonAntonio
 	/// </summary>
 	public class Player : MonoBehaviour 
 	{
+		#region Variables Publicas
+		/// <summary>
+		/// <para>Prefab del cubo para instanciar.</para>
+		/// </summary>
+		public GameObject prefabCubo;                                                   // Prefab del cubo para instanciar
+		#endregion
 
+		#region Inicializadores
+		/// <summary>
+		/// <para>Inicializador de <see cref="Player"/>.</para>
+		/// </summary>
+		private void Start()// Inicializador de Player
+		{
+			Instantiate(prefabCubo);
+		}
+		#endregion
 	}
 }
