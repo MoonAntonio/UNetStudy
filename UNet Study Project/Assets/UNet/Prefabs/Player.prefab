@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4648742315819650}
   - component: {fileID: 114701625882172212}
+  - component: {fileID: 114029799253410842}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -40,6 +41,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114029799253410842
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1458499622474324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39d14077dcb79004298e46e145d7ef02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabCubo: {fileID: 1254898430932890, guid: 0217b6a7b88ab6441bcacc0b798a06ad, type: 2}
 --- !u!114 &114701625882172212
 MonoBehaviour:
   m_ObjectHideFlags: 1
