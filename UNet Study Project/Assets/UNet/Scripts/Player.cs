@@ -24,6 +24,10 @@ namespace MoonAntonio
 		/// <para>Prefab del cubo para instanciar.</para>
 		/// </summary>
 		public GameObject prefabCubo;                                                   // Prefab del cubo para instanciar
+		/// <summary>
+		/// <para>Nombre del player.</para>
+		/// </summary>
+		[SyncVar] public string nombre = "name";										// Nombre del player
 		#endregion
 
 		#region Inicializadores
@@ -57,6 +61,16 @@ namespace MoonAntonio
 
 			// Propagamos el objeto creado a los demas clientes.
 			NetworkServer.Spawn(go);
+		}
+
+		/// <summary>
+		/// <para>Cambia el nombre del jugador.</para>
+		/// </summary>
+		/// <param name="newNombre"></param>
+		[ClientRpc]
+		public void RpcCambiarNombre(string newNombre)// Cambia el nombre del jugador
+		{
+			nombre = newNombre;
 		}
 		#endregion
 	}
